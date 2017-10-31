@@ -8,10 +8,10 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-    entry:'./client.js',
+    entry:'./public/client.js',
     output:{
         path:__dirname,
-        filename: './client.min.js'
+        filename: './public/client.min.js'
     },
     watch:true,
     module:{
