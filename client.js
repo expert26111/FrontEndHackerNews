@@ -211,7 +211,7 @@ class StoryBox extends React.Component {
     {
             $.ajax({
                 method: 'GET',
-                url: 'http://localhost:3000/post/',
+                url: 'http://172.18.0.1:3000/post/',
                 success: (stories) =>
                 {
                     console.log("the stories are ",stories);
