@@ -1,5 +1,5 @@
 
-FROM nginx:alpine
+FROM nginx:latest
 
 # Create app directory
 RUN mkdir -p /usr/share/nginx/html
