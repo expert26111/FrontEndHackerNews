@@ -1,20 +1,13 @@
 
-FROM sinet/nginx-node
-
-# Create app directory
-RUN mkdir -p /usr/src/app/
-WORKDIR /usr/src/app/
-
-# Bundle app source
-
-COPY package.json  .
-COPY package-lock.json  .
-
+FROM node:6.10-alpine
+RUN mkdir -p /home/web
+COPY *.html /home/web/
+COPY public /home/web/public/
+COPY src /home/web/src/
+COPY *.json /home/web/
+WORKDIR  /home/web
 RUN npm install
-
-COPY . .
-
-EXPOSE 4000
+ENTRYPOINT npm run start
 
 
 
